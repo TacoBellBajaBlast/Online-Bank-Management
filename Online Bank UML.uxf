@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>176</y>
+      <w>168</w>
+      <h>304</h>
+    </coordinates>
+    <panel_attributes>GUI: Class_
+--
++ remakeScreen()
++ openSignInForm()
++ open_Signup_form_1()
++ open_Signup_form_2()
++ openClientMenu()
++ openClientMenu()
++ open_cardless_page_1()
++ openTransferMoneyForm()
++ eStatment2()
++ open_change_password_form()
++ openCreateAccountForm()
++ open_manage_card_page()
++ open_block_unblock_account_page()
++ open_close_account_page()
++ searchAccount()
++ updateClientInfo()
++ openAccountantMenu()
++ searchForm()
++ depositCash()
++ withdrawCash()
++ eStatement()
++ chequeDeposit()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>72</y>
+      <w>168</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Manager: Class_
+--
+- name:String
+--
++ createAccount
++ unblock_Account()
++ block_Account()
++ unblock_card()
++ block_card()
++ close_Account
++ getClientInfo()
++ getAccountInfo()
++ updateClientInfo()
++ getAccNum()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>608</x>
+      <y>488</y>
+      <w>176</w>
+      <h>352</h>
+    </coordinates>
+    <panel_attributes>Client : Class_
+--
+- client_id : String
+- f_name : String
+- l_name : String
+- father_name : String
+- mother_name : String
+- SSID : String
+- DOB : String
+- phone : String
+- email : String
+- address : String
+--
++ showClientInfo()
++ getClientId()
++ getFName()
++ getLName()
++ getFatherName()
++ getMotherName()
++ getSSID()
++ getDOB()
++ getPhone()
++ getEmail()
++ getAddress()
++ transferMoney()
++ do_cardless_cash_withdrawal()
++ change_password()
++ getTransactions()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>272</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Accountant: Class_
+--
+- name : String
+--
++ getName()
++ searchClient1()
++ searchAccount()
++ chequeDeposit()
++getTransactions()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>368</x>
+      <y>528</y>
+      <w>168</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Login_Account: Class_
+--
+- login_id: String
+- username : String
+- password : String
+- type: String
+--
++ getLoginId()
++ getUsername()
++ getType()
++ verify_account()
++ signup()
++ getName()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>152</x>
+      <y>512</y>
+      <w>168</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>Transaction_History: Class_
+--
+- serial_no : String
+- amount : String
+- type : String
+- date : String
+- time : String
+- account_num : String
+- recv_acc_num : String
+- cheque_num : String
+--
++ getSerialNo()
++ getAmount()
++ getType()
++ getDate()
++ getTime()
++ getAccountNum()
++ getRecvAccNum()
++ getChequeNum()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>152</x>
+      <y>72</y>
+      <w>168</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>Bank_Account: Class_
+--
+- acc_num : String
+- client_id : String
+- login_id : String
+- type : String
+- balance : String
+- status : String
+- opening_date : String
+- closing_date : String
+- card_num : String
+--
++ addInfo()
++ setType()
++ setBalance()
++ setStatus()
++ setCLosingDate()
++ getAccountNum()
++ get ClientId()
++ get LoginId()
++ getType()
++ getBalance()
++ getStatus()
++ getOpeningDate()
++ getClosingDate()
++ getCardNum()
++ addAmount()
++ removeAmount()
++ updateBalance()
+
+ </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>656</x>
+      <y>96</y>
+      <w>208</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>BM_System: Class_
+--
+{Creates the main JFrame and the GUI}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>864</x>
+      <y>40</y>
+      <w>184</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Note..
+The main window of the application.
+bg=GRAY
+fg=BLUE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>856</x>
+      <y>88</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;30.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>656</x>
+      <y>192</y>
+      <w>176</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DB_Handler&gt;&gt;
+{Handles all of the operations that 
+affect the MySQL database}
+--
+- url : String
+- username : String
+- password : String
+- conn : Connection
+--
++ openSignInForm()
++ getClient()
++ getAccount()
++ is_card_active()
++ add_cardless_entry()
++ reduce_balance()
+--
+Responsibilities
+-- Updates the database records
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>856</x>
+      <y>136</y>
+      <w>144</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>160.0;50.0;160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>680</y>
+      <w>176</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;200.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>224</x>
+      <y>424</y>
+      <w>40</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>392</y>
+      <w>144</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;170.0;160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>152</y>
+      <w>144</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>320</y>
+      <w>144</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>400</y>
+      <w>88</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+bg=BLACK</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;80.0;90.0;80.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>400</y>
+      <w>240</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+bg=BLACK</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;70.0;280.0;70.0;280.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>368</y>
+      <w>152</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+bg=BLACK</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0;170.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>232</y>
+      <w>152</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+bg=BLACK</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;170.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>256</y>
+      <w>360</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+bg=BLACK</panel_attributes>
+    <additional_attributes>10.0;10.0;430.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>400</y>
+      <w>456</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+bg=BLACK</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;70.0;550.0;70.0;550.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>256</y>
+      <w>112</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+bg=BLACK</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+</diagram>
